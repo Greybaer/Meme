@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>C60C5E0F-BBB7-4869-B8A5-89186774C6BE</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Meme</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>D80C1AAFD2428A176EF27D09F50A0841593E49D3</key>
+		<string>https://github.com/Greybaer/Meme.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Meme.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>D80C1AAFD2428A176EF27D09F50A0841593E49D3</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/Greybaer/Meme.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>D80C1AAFD2428A176EF27D09F50A0841593E49D3</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>D80C1AAFD2428A176EF27D09F50A0841593E49D3</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Meme</string>
+		</dict>
+	</array>
+</dict>
+</plist>
