@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="FgH-B3-q9E">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="FgH-B3-q9E">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
@@ -251,7 +251,7 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                     <variation key="widthClass=compact" misplaced="YES">
-                                                        <rect key="frame" x="161" y="15" width="151" height="21"/>
+                                                        <rect key="frame" x="161" y="15" width="151" height="20.5"/>
                                                     </variation>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FuJ-QR-J54">
@@ -554,51 +554,34 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uWh-p9-PW8">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                             </imageView>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JEA-cu-Ocl">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                                <items>
-                                    <barButtonItem title="Item" id="AQ1-lT-9a5"/>
-                                </items>
-                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="JEA-cu-Ocl" firstAttribute="top" secondItem="Ieq-CC-i9z" secondAttribute="bottom" id="ECF-zs-Oaq"/>
-                            <constraint firstItem="JEA-cu-Ocl" firstAttribute="centerX" secondItem="uWh-p9-PW8" secondAttribute="centerX" id="Ttp-2j-Ylz"/>
-                            <constraint firstItem="uWh-p9-PW8" firstAttribute="leading" secondItem="D5z-T1-vB4" secondAttribute="leadingMargin" id="XKe-BC-Obl"/>
-                            <constraint firstAttribute="trailing" secondItem="JEA-cu-Ocl" secondAttribute="trailing" id="ZSq-VY-bRE"/>
-                            <constraint firstItem="uWh-p9-PW8" firstAttribute="top" secondItem="JEA-cu-Ocl" secondAttribute="bottom" constant="53" id="nVJ-eO-Qbz"/>
-                            <constraint firstItem="8Wq-MY-5nD" firstAttribute="top" secondItem="uWh-p9-PW8" secondAttribute="bottom" constant="25" id="oO1-Zi-jDQ"/>
-                            <constraint firstItem="JEA-cu-Ocl" firstAttribute="leading" secondItem="D5z-T1-vB4" secondAttribute="leading" id="rHb-yI-4D7"/>
+                            <constraint firstItem="uWh-p9-PW8" firstAttribute="leading" secondItem="D5z-T1-vB4" secondAttribute="leadingMargin" constant="-21" id="8Gs-hd-lbs"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="uWh-p9-PW8" secondAttribute="bottom" constant="-10" id="bZ5-ET-2ua"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="uWh-p9-PW8" secondAttribute="trailing" constant="-27" id="bcC-7V-8pI"/>
+                            <constraint firstItem="uWh-p9-PW8" firstAttribute="top" secondItem="D5z-T1-vB4" secondAttribute="top" id="daz-gW-EWj"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="uWh-p9-PW8"/>
-                                <exclude reference="JEA-cu-Ocl"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="oO1-Zi-jDQ"/>
-                                <exclude reference="ECF-zs-Oaq"/>
-                                <exclude reference="Ttp-2j-Ylz"/>
-                                <exclude reference="ZSq-VY-bRE"/>
-                                <exclude reference="rHb-yI-4D7"/>
-                                <exclude reference="XKe-BC-Obl"/>
-                                <exclude reference="nVJ-eO-Qbz"/>
+                                <exclude reference="8Gs-hd-lbs"/>
+                                <exclude reference="bZ5-ET-2ua"/>
+                                <exclude reference="bcC-7V-8pI"/>
+                                <exclude reference="daz-gW-EWj"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="uWh-p9-PW8"/>
-                                <include reference="JEA-cu-Ocl"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="oO1-Zi-jDQ"/>
-                                <include reference="ECF-zs-Oaq"/>
-                                <include reference="Ttp-2j-Ylz"/>
-                                <include reference="ZSq-VY-bRE"/>
-                                <include reference="rHb-yI-4D7"/>
-                                <include reference="XKe-BC-Obl"/>
-                                <include reference="nVJ-eO-Qbz"/>
+                                <include reference="8Gs-hd-lbs"/>
+                                <include reference="bZ5-ET-2ua"/>
+                                <include reference="bcC-7V-8pI"/>
+                                <include reference="daz-gW-EWj"/>
                             </mask>
                         </variation>
                     </view>
