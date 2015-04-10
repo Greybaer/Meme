@@ -18,12 +18,6 @@ class MemeCollectionViewController: UIViewController, UICollectionViewDataSource
     //'Edit' the meme
     @IBOutlet weak var memeEdit: UIBarButtonItem!
    
-    //Flag to show the editor if we're just starting up and there are no memes
-    //This flag avoids the editor bouncing up and down is the user cancels the editor without creating a meme
-    //The Sent Memes will be empty, but we assume the user is smart enough to know that if he/she hits cancel without creaing one
-    //This is where persistence would be nice eventually
-    var firstRun: Bool! = true
-    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -32,13 +26,11 @@ class MemeCollectionViewController: UIViewController, UICollectionViewDataSource
         //Are the memes emnpty? If so, pop up the editor. This should create the initial app functionality required by the spec. 
         //This will only happen on the initial load, as monitored by a global var
 
-        if (UIApplication.sharedApplication().delegate as AppDelegate).memes.count == 0 && firstRun == true {
+        if (UIApplication.sharedApplication().delegate as AppDelegate).memes.count == 0 {
             //Pop up the editor
             let controller =
             self.storyboard?.instantiateViewControllerWithIdentifier("memeEditor") as MemeEditorViewController
             self.navigationController?.presentViewController(controller, animated: true, completion: nil)
-            //Now stop the bouncy editor silliness...
-            firstRun = false
         }
         //println("Number of memes from ViewDidAppear: \((UIApplication.sharedApplication().delegate as AppDelegate).memes.count)")
         

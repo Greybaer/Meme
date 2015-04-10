@@ -21,6 +21,15 @@ class MemeTableViewController: UIViewController, UITableViewDataSource{
     }
 
     override func viewDidAppear(animated: Bool) {
+        //Are the memes emnpty? If so, pop up the editor. This should create the initial app functionality required by the spec.
+        //This will only happen on the initial load, as monitored by a global var
+        if (UIApplication.sharedApplication().delegate as AppDelegate).memes.count == 0 {
+        //Pop up the editor
+        let controller =
+        self.storyboard?.instantiateViewControllerWithIdentifier("memeEditor") as MemeEditorViewController
+        self.navigationController?.presentViewController(controller, animated: true, completion: nil)
+        }
+
         //Reload the meme data
         memeTable.reloadData()
     }

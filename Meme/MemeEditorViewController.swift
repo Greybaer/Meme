@@ -49,6 +49,26 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
         //Is there a cammera on this device? Enable/disable button depending
         cameraButton.enabled=UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera)
         
+        //Are there memes in the data? If not, disable the cancel button
+        // Thank you feedback person, this is a more elegant way to handle the bouncy editor problem!
+        // Cancel button
+        if (UIApplication.sharedApplication().delegate as AppDelegate).memes.count == 0 {
+           cancelButton.enabled = false
+        }
+        else{  //Just in case...
+           cancelButton.enabled = true
+
+        }
+        
+        //The share button will depend on whether there's an image in the view
+        if imageView.image == nil{
+            shareButton.enabled = false
+        }
+        else {
+            shareButton.enabled = true
+        }
+        
+        
         //Text attributes
         //Set the font, color and outline
         topText.defaultTextAttributes=memeTextAttributes
@@ -112,18 +132,17 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
     
     //This will be the new sharing function
     @IBAction func shareMeme(sender: UIBarButtonItem) {
-
-        
         let memedImage: UIImage = generateMeme()
         let activityController = UIActivityViewController(activityItems: [memedImage], applicationActivities: nil)
         activityController.completionWithItemsHandler = {
             activity, completed, items, error in
             if completed{
                 self.saveMeme(memedImage)
-                self.navigationController?.dismissViewControllerAnimated(true, completion: nil)
+                self.dismissViewControllerAnimated(true, completion: nil)
             }
             //Here's where the Sent Memes Views will appear
-            self.dismissViewControllerAnimated(true, completion: nil)
+            //Extra dismiss call?
+            //self.dismissViewControllerAnimated(true, completion: nil)
         }
         self.presentViewController(activityController, animated: true, completion: nil)
        
